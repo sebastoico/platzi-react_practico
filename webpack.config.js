@@ -28,12 +28,19 @@ module.exports = {
         }
       },
       {
-        test: /\.s[ac]ss$/i,              // Reglas CSS y Sass
+        test: /\.s?[ca]ss$/,              // Reglas CSS y Sass
         use: [
           "style-loader",
           "css-loader",
           "sass-loader"
         ]
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/, // Reglas para imágenes
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/pictures/[hash][ext]'
+        }
       }
     ]
   },
