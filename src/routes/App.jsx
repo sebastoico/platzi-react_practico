@@ -11,7 +11,7 @@ import CreateAccount from "../pages/CreateAccount.jsx";
 import Checkout from "../pages/Checkout.jsx";
 import Orders from "../pages/Orders.jsx";
 import NotFound from "../pages/NotFound.jsx";
-import "../styles/global.css";
+import "@styles/global.css";
 
 const App = () => {
   return (

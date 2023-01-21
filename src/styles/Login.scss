@@ -1,17 +1,16 @@
 @use "_vars.scss";
 
-.login {
+.Login {
   width: 100%;
   height: calc(100vh - 61px);
   display: grid;
   place-items: center;
 }
 
-.login-container {
+.Login-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 300px;
-  justify-items: center;
 }
 
 .logo {
@@ -21,25 +20,17 @@
   display: none;
 }
 
-.title {
-  font-size: var(--lg);
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.subtitle {
-  color: var(--very-light-pink);
-  font-size: var(--md);
-  font-weight: 300px;
-  margin-top: 0px;
-  margin-bottom: 48px;
-  text-align: center;
-}
-
 .form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+}
+.form a {
+  color: var(--hospital-green);
+  text-decoration: none;
+  font-size: var(--sm);
+  margin-top: 12px;
+  margin-bottom: 52px;
+  text-align: center;
 }
 
 .label {
@@ -71,7 +62,25 @@
   height: 56px;
 }
 
+.secondary-button {
+  background-color: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--hospital-green);
+  width: 100%;
+  height: 56px;
+  font-size: var(--md);
+  font-weight: bold;
+  color: var(--hospital-green);
+  padding: 6px;
+  cursor: pointer;
+}
+
 .login-button {
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+.signup-button {
   margin-top: 0px;
   margin-bottom: 32px;
 }
@@ -81,4 +90,9 @@
     display: block;
     margin-top: 32px;
   }
+
+  .Login-container {
+    height: calc(100vh - 61px);
+  }
+  
 }
