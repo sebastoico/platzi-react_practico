@@ -1,0 +1,21 @@
+@use "_vars.scss";
+
+.NotFound {
+  width: 100%;
+  height: calc(100vh - 61px);
+  display: grid;
+  place-items: center;
+}
+
+.NotFound-title {
+  font-size: var(--lg);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.NotFound-subtitle {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  font-weight: 300px;
+  text-align: center;
+}

@@ -5,7 +5,7 @@ import logo from '../assets/logos/logo_yard_sale.svg';
 const Login = () => {
   return (
     <div className="login">
-      <div className="form-container">
+      <div className="login-container">
         <img src={logo} alt="logo" className="logo" />
 
         <h1 className="title">Create a new password</h1>

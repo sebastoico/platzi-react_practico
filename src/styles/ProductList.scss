@@ -1,0 +1,16 @@
+@use "_vars.scss";
+
+.ProductList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 24px;
+  place-content: center;
+  justify-items: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .ProductList {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+}

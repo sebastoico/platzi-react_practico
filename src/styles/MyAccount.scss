@@ -1,0 +1,74 @@
+@use "_vars.scss";
+
+.MyAccount {
+  width: 100%;
+  height: calc(100vh - 61px);
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.MyAccount-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 300px;
+}
+
+.MyAccount-container .title {
+  font-size: var(--lg);
+  margin-bottom: 32px;
+  text-align: start;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: var(--sm);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.value {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  height: 32px;
+  padding: 6px;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+.secondary-button {
+  background-color: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--hospital-green);
+  width: 100%;
+  height: 56px;
+  font-size: var(--md);
+  font-weight: bold;
+  color: var(--hospital-green);
+  padding: 6px;
+  cursor: pointer;
+}
+
+.edit-button {
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 640px) {
+  .MyAccount-container {
+    height: 100%;
+  }
+
+  .MyAccount {
+    height: calc(100vh - 61px);
+    justify-content: space-between;
+  }
+}

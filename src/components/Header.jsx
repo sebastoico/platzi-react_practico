@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/Header.scss";
 import logo from "../assets/logos/logo_yard_sale.svg";
 import menuLogo from "../assets/icons/icon_menu.svg";
 import shoppingCartLogo from "../assets/icons/icon_shopping_cart_notification.svg";
+import "../styles/Header.scss";
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
       <img src={menuLogo} alt="menu" className="menu" />
 
       <div className="navbar-left">
-        <img src={logo} alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="nav-logo" />
         <ul>
           <li>
             <a href="/">All</a>

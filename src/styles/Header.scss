@@ -1,3 +1,5 @@
+@use "_vars.scss";
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -8,7 +10,7 @@ nav {
 .menu {
   display: none;
 }
-.logo {
+.nav-logo {
   width: 100px;
 }
 .navbar-left {

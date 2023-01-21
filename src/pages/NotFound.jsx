@@ -1,9 +1,13 @@
 import React from 'react';
+import '../styles/NotFound.scss';
 
 const NotFound = () => {
   return (
-    <div>
-      Not Found.
+    <div className="NotFound">
+      <div>
+        <h1 className="NotFound-title">We're sorry.</h1>
+        <p className="NotFound-subtitle">We couldn't find the page you're looking for.</p>
+      </div>
     </div>
   );
 }
