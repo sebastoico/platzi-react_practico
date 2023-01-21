@@ -44,12 +44,11 @@ nav {
   color: var(--black);
   margin-right: 16px;
 }
+.navbar-email:hover {
+  cursor: pointer;
+}
 
 @media (max-width: 640px) {
-  .menu {
-    display: block;
-  }
-
   .navbar-left ul, .navbar-email {
     display: none;
   }

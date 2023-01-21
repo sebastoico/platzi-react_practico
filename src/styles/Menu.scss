@@ -1,6 +1,10 @@
 @use "_vars.scss";
 
 .desktop-menu {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  background-color: var(--white);
   width: 100px;
   height: auto;
   border: 1px solid var(--very-light-pink);
@@ -30,4 +34,10 @@
 .desktop-menu ul li:last-child a {
   color: var(--hospital-green);
   font-size: var(--sm);
+}
+
+@media (max-width: 640px) {
+  .desktop-menu {
+    display: none;
+  }
 }
