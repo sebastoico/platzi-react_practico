@@ -32,6 +32,9 @@
 .MyOrder-products {
   overflow-y: auto;
 }
+.MyOrder-products::-webkit-scrollbar {
+	display: none;
+}
 
 .order {
   display: grid;
