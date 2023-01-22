@@ -1,54 +1,35 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import OrderItem from '@components/OrderItem';
+import AppContext from "@context/AppContext";
+import '@styles/MyOrder.scss';
+
+import flecha from '@icons/flechita.svg';
 
 const MyOrder = () => {
+  const {state:{cart}} = useContext(AppContext);
+
   return (
-    <div class="my-order">
-      <div class="my-order-container">
-        <h1 class="title">My order</h1>
-        <div class="my-order-content">
-          <div class="order">
-            <p>
-              <span>04.25.2021</span>
-              <span>6 articles</span>
-            </p>
-            <p>$ 560.00</p>
-          </div>
-          <div class="shopping-cart">
-            <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
-            </figure>
-            <p>Bike</p>
-            <p>$ 120.00</p>
-          </div>
-          <div class="shopping-cart">
-            <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
-            </figure>
-            <p>Bike</p>
-            <p>$ 120.00</p>
-          </div>
-          <div class="shopping-cart">
-            <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
-            </figure>
-            <p>Bike</p>
-            <p>$ 120.00</p>
-          </div>
-          <div class="shopping-cart">
-            <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
-            </figure>
-            <p>Bike</p>
-            <p>$ 120.00</p>
-          </div>
-          <div class="shopping-cart">
-            <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
-            </figure>
-            <p>Bike</p>
-            <p>$ 120.00</p>
-          </div>
+    <div className="MyOrder">
+      <div className="title-container">
+        <img src={flecha} alt="arrow" />
+        <p className="title">My order</p>
+      </div>
+    
+      <div>
+        {cart.map(product => (
+          <OrderItem product={product} key={`orderItem-${product.id}`}/>
+        ))}
+    
+        <div className="order">
+          <p>
+            <span>Total</span>
+          </p>
+          <p>$ 360.00</p>
         </div>
+    
+        <button className="primary-button">
+          Checkout
+        </button>
       </div>
     </div>
   );
