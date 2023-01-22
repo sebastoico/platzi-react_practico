@@ -4,7 +4,7 @@ import AppContext from "@context/AppContext";
 
 import cerrar from '@icons/icon_close.png';
 
-const OrderItem = ({product, indexValue}) => {
+const OrderItem = ({product}) => {
   const {removeFromCart} = useContext(AppContext);
 
   return (
@@ -14,7 +14,7 @@ const OrderItem = ({product, indexValue}) => {
       </figure>
       <p>{product.title}</p>
       <p>$ {product.price}.00</p>
-      <img src={cerrar} alt="close" onClick={() => removeFromCart(indexValue)}/>
+      <img src={cerrar} alt="close" onClick={() => removeFromCart(product)}/>
     </div>
   );
 }
