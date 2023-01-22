@@ -1,0 +1,47 @@
+@use "_vars.scss";
+
+.MobileMenu {
+  position: absolute;
+  top: 61px;
+  padding: 24px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 0;
+  width: calc(100% - 48px);
+}
+.MobileMenu ul {
+  padding: 0;
+  margin: 24px 0 24px 0;
+  list-style: none;
+}
+.MobileMenu ul:first-child {
+  border-bottom: 1px solid var(--very-light-pink);
+}
+.MobileMenu > ul:last-child li:first-child{
+  margin-bottom: 12px;
+}
+.MobileMenu ul li {
+  margin-bottom: 24px;
+}
+.MobileMenu ul li a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+}
+.MobileMenu .email {
+  font-size: var(--sm);
+  font-weight: lighter;
+  margin-bottom: 12px;
+}
+.MobileMenu .sign-out {
+  font-size: var(--sm);
+  color: var(--hospital-green);
+}
+
+@media (min-width: 641px) {
+  .MobileMenu {
+    display: none;
+  }
+}
