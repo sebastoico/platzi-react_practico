@@ -13,8 +13,14 @@ nav {
 .menu {
   display: none;
 }
+.menu:hover {
+  cursor: pointer;
+}
 .nav-logo {
   width: 100px;
+}
+.nav-logo:hover {
+  cursor: pointer;
 }
 .navbar-left {
   display: flex;
@@ -48,6 +54,9 @@ nav {
   margin-right: 16px;
 }
 .navbar-email:hover {
+  cursor: pointer;
+}
+.navbar-shopping-cart:hover {
   cursor: pointer;
 }
 

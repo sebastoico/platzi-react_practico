@@ -6,3 +6,7 @@ body {
 input, textarea, button {
   font-family: inherit;
 }
+
+body:hover {
+  cursor: default;
+}
