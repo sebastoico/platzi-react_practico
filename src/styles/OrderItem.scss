@@ -24,3 +24,6 @@
   font-size: var(--md);
   font-weight: bold;
 }
+.OrderItem:last-child:hover {
+  cursor: pointer;
+}
