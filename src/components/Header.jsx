@@ -10,18 +10,7 @@ import shoppingCartLogo from "@icons/icon_shopping_cart_notification.svg";
 import shoppingCartNotLogo from "@icons/icon_shopping_cart.svg";
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
-  const [toggleOrders, setToggleOrders] = useState(false);
-  const {state:{cart}} = useContext(AppContext);
-
-  const handleToggle = () => {
-    setToggle(!toggle);
-    setToggleOrders(false);
-  };
-  const handleToggleOrders = () => {
-    setToggleOrders(!toggleOrders);
-    setToggle(false);
-  }
+  const {state, toggleMenu, toggleOrder} = useContext(AppContext);
 
   return (
     <nav>
@@ -53,19 +42,19 @@ const Header = () => {
 
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email" onClick={handleToggle}>
+          <li className="navbar-email" onClick={() => toggleMenu()}>
             email@yardsale.com
           </li>
-          <li className="navbar-shopping-cart" onClick={handleToggleOrders}>
+          <li className="navbar-shopping-cart" onClick={() => toggleOrder()}>
             <img 
-              src={cart.length > 0 ? shoppingCartLogo : shoppingCartNotLogo} 
+              src={state.cart.length > 0 ? shoppingCartLogo : shoppingCartNotLogo} 
               alt="shopping cart" 
             />
           </li>
         </ul>
       </div>
-      {toggle && <Menu/>}
-      {toggleOrders && <MyOrder/>}
+      {state.menuIsOpen && <Menu/>}
+      {state.orderIsOpen && <MyOrder/>}
     </nav>
   );
 };
